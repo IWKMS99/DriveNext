@@ -1,3 +1,74 @@
 <resources>
+    <!-- Общее -->
     <string name="app_name">DriveNext</string>
+    <string name="slogan" translatable="false">Поможем найти твою следующую поездку</string>
+
+    <!-- Кнопки -->
+    <string name="btn_next" translatable="false">Далее</string>
+    <string name="btn_skip" translatable="false">Пропустить</string>
+    <string name="btn_get_started" translatable="false">Поехали</string>
+    <string name="btn_login" translatable="false">Войти</string>
+    <string name="btn_register" translatable="false">Зарегистрироваться</string>
+    <string name="btn_login_with_google" translatable="false">Войти через Google</string>
+    <string name="btn_retry" translatable="false">Повторить попытку</string>
+
+    <!-- Экран "Нет подключения" -->
+    <string name="no_connection_title" translatable="false">Нет подключения к интернету</string>
+    <string name="no_connection_subtitle" translatable="false">Проверьте подключение и повторите попытку</string>
+
+    <!-- Онбординг -->
+    <string name="onboarding_1_title" translatable="false">Аренда автомобилей</string>
+    <string name="onboarding_1_subtitle" translatable="false">Открой для себя удобный и доступный способ передвижения</string>
+    <string name="onboarding_2_title" translatable="false">Безопасно и удобно</string>
+    <string name="onboarding_2_subtitle" translatable="false">Арендуй автомобиль и наслаждайся его удобством</string>
+    <string name="onboarding_3_title" translatable="false">Лучшие предложения</string>
+    <string name="onboarding_3_subtitle" translatable="false">Выбирай понравившееся среди сотен доступных автомобилей</string>
+
+    <!-- Авторизация -->
+    <string name="login_title" translatable="false">Войдите в аккаунт</string>
+    <string name="login_subtitle" translatable="false">Пожалуйста, введите свои данные</string>
+    <string name="hint_email" translatable="false">Электронная почта</string>
+    <string name="hint_password" translatable="false">Введите Пароль</string>
+    <string name="forgot_password" translatable="false">Забыли пароль?</string>
+    <string name="login_success_toast" translatable="false">Успешный вход!</string>
+
+    <!-- Регистрация -->
+    <string name="register_title" translatable="false">Создать аккаунт</string>
+    <string name="hint_enter_email" translatable="false">Введите электронную почту</string>
+    <string name="hint_create_password" translatable="false">Придумайте пароль</string>
+    <string name="hint_repeat_password" translatable="false">Повторите пароль</string>
+    <string name="agree_terms" translatable="false">Я согласен с условиями обслуживания и политикой конфиденциальности</string>
+    <string name="hint_lastname" translatable="false">Фамилия</string>
+    <string name="hint_firstname" translatable="false">Имя</string>
+    <string name="hint_middlename" translatable="false">Отчество</string>
+    <string name="hint_birthdate" translatable="false">Дата рождения (ДД/ММ/ГГГГ)</string>
+    <string name="gender" translatable="false">Пол</string>
+    <string name="gender_male" translatable="false">Мужской</string>
+    <string name="gender_female" translatable="false">Женский</string>
+    <string name="register_photo_subtitle" translatable="false">Добавление фотографии поможет владельцам и арендаторам узнать друг друга, когда они будут забирать машину</string>
+    <string name="hint_driver_license_number" translatable="false">Номер водительского удостоверения</string>
+    <string name="hint_middlename_optional" translatable="false">Отчество (необязательно)</string>
+    <string name="hint_birthdate_label" translatable="false">Дата рождения</string>
+    <string name="hint_birthdate_format" translatable="false">ДД/ММ/ГГГГ</string>
+    <string name="hint_issue_date" translatable="false">Дата выдачи (ДД/ММ/ГГГГ)</string>
+    <string name="upload_driver_license_photo" translatable="false">Загрузите фото водительского удостоверения</string>
+    <string name="upload_passport_photo" translatable="false">Загрузите фото паспорта</string>
+    <string name="btn_upload_photo" translatable="false">Загрузить фото</string>
+    <string name="upload_photo_action" translatable="false">Загрузить фото</string>
+
+    <!-- Успешная регистрация -->
+    <string name="registration_success_title" translatable="false">Поздравляем</string>
+    <string name="registration_success_subtitle" translatable="false">Вы успешно зарегистрировались. Обработка ваших персональных данных займет около двух часов. Спасибо за ожидание.</string>
+    <string name="registration_success_header" translatable="false">Пользуйтесь с удовольствием</string>
+
+    <!-- Сообщения об ошибках -->
+    <string name="error_invalid_email" translatable="false">Введите корректный адрес электронной почты</string>
+    <string name="error_passwords_do_not_match" translatable="false">Пароли не совпадают</string>
+    <string name="error_terms_not_accepted" translatable="false">Необходимо согласиться с условиями</string>
+    <string name="error_field_required" translatable="false">Поле не может быть пустым</string>
+    <string name="error_fill_all_fields" translatable="false">Пожалуйста, заполните все обязательные поля</string>
+    <string name="error_invalid_date" translatable="false">Введите корректную дату</string>
+    <string name="error_photo_required" translatable="false">Пожалуйста, загрузите все необходимые фото</string>
+    <string name="error_password_length" translatable="false">Пароль должен быть не менее 6 символов</string>
+
 </resources>
