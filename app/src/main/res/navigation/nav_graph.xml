@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.iwkms.drivenext.presentation.splash.ui.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noConnectionFragment"
+        android:name="com.iwkms.drivenext.presentation.common.NoConnectionFragment"
+        android:label="fragment_no_connection"
+        tools:layout="@layout/fragment_no_connection" />
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.iwkms.drivenext.presentation.onboarding.ui.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_onboardingFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.iwkms.drivenext.presentation.auth.ui.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth">
+        <action
+            android:id="@+id/action_authFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_authFragment_to_registrationStep1Fragment"
+            app:destination="@id/registrationStep1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.iwkms.drivenext.presentation.auth.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registrationStep1Fragment"
+            app:destination="@id/registrationStep1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationStep1Fragment"
+        android:name="com.iwkms.drivenext.presentation.auth.ui.RegistrationStep1Fragment"
+        android:label="fragment_registration_step1"
+        tools:layout="@layout/fragment_registration_step1">
+        <action
+            android:id="@+id/action_registrationStep1Fragment_to_registrationStep2Fragment"
+            app:destination="@id/registrationStep2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationStep2Fragment"
+        android:name="com.iwkms.drivenext.presentation.auth.ui.RegistrationStep2Fragment"
+        android:label="fragment_registration_step2"
+        tools:layout="@layout/fragment_registration_step2">
+        <action
+            android:id="@+id/action_registrationStep2Fragment_to_registrationStep3Fragment"
+            app:destination="@id/registrationStep3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationStep3Fragment"
+        android:name="com.iwkms.drivenext.presentation.auth.ui.RegistrationStep3Fragment"
+        android:label="RegistrationStep3Fragment"
+        tools:layout="@layout/fragment_registration_step3">
+        <action
+            android:id="@+id/action_registrationStep3Fragment_to_registrationSuccessFragment"
+            app:destination="@id/registrationSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationSuccessFragment"
+        android:name="com.iwkms.drivenext.presentation.auth.ui.RegistrationSuccessFragment"
+        android:label="fragment_registration_success"
+        tools:layout="@layout/fragment_registration_success" >
+        <action
+            android:id="@+id/action_registrationSuccessFragment_to_splashScreenFragment"
+            app:destination="@id/splashScreenFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
