@@ -71,4 +71,7 @@
     <string name="error_photo_required" translatable="false">Пожалуйста, загрузите все необходимые фото</string>
     <string name="error_password_length" translatable="false">Пароль должен быть не менее 6 символов</string>
 
+    <!-- Google Sign-In -->
+    <string name="default_web_client_id" translatable="false">472168025259-ejhcih2mbegeaf7empphekr83ru10tjc.apps.googleusercontent.com</string>
+
 </resources>

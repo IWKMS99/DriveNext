@@ -48,6 +48,13 @@
         <action
             android:id="@+id/action_loginFragment_to_registrationStep1Fragment"
             app:destination="@id/registrationStep1Fragment" />
+
+        <action
+            android:id="@+id/action_loginFragment_to_splashScreenFragment"
+            app:destination="@id/splashScreenFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+
     </fragment>
     <fragment
         android:id="@+id/registrationStep1Fragment"
