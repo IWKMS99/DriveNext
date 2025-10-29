@@ -74,4 +74,28 @@
     <!-- Google Sign-In -->
     <string name="default_web_client_id" translatable="false">472168025259-ejhcih2mbegeaf7empphekr83ru10tjc.apps.googleusercontent.com</string>
 
+    <!-- Меню навигации -->
+    <string name="menu_home" translatable="false">Главная</string>
+    <string name="menu_favorites" translatable="false">Избранное</string>
+    <string name="menu_settings" translatable="false">Настройки</string>
+
+    <!-- Экран Настройки -->
+    <string name="settings_title" translatable="false">Настройки</string>
+    <string name="settings_my_bookings" translatable="false">Мои бронирования</string>
+    <string name="settings_theme" translatable="false">Тема</string>
+    <string name="settings_notifications" translatable="false">Уведомления</string>
+    <string name="settings_connect_car" translatable="false">Подключить свой автомобиль</string>
+    <string name="settings_help" translatable="false">Помощь</string>
+    <string name="settings_invite_friend" translatable="false">Пригласи друга</string>
+
+    <!-- Экран Профиль -->
+    <string name="profile_title" translatable="false">Профиль</string>
+    <string name="profile_joined_date" translatable="false">Присоединился в июле 2024</string>
+    <string name="profile_email_label" translatable="false">Электронная почта</string>
+    <string name="profile_password_label" translatable="false">Пароль</string>
+    <string name="profile_change_password" translatable="false">Поменять пароль</string>
+    <string name="profile_gender_label" translatable="false">Пол</string>
+    <string name="profile_google_label" translatable="false">Google</string>
+    <string name="profile_logout" translatable="false">Выйти из профиля</string>
+
 </resources>
