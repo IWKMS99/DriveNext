@@ -30,7 +30,7 @@ class RegistrationSuccessFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnNext.setOnClickListener {
-            findNavController().navigate(R.id.action_registrationSuccessFragment_to_splashScreenFragment)
+            findNavController().navigate(R.id.action_registrationSuccessFragment_to_homeFragment)
         }
     }
 

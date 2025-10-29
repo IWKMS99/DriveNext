@@ -132,7 +132,7 @@ class LoginFragment : Fragment() {
             is SignInState.Success -> {
                 Toast.makeText(requireContext(), "Вход выполнен успешно!", Toast.LENGTH_LONG).show()
                 findNavController().navigate(
-                    R.id.action_loginFragment_to_splashScreenFragment,
+                    R.id.action_loginFragment_to_homeFragment,
                     null,
 
                     )
