@@ -101,7 +101,37 @@
         android:id="@+id/homeFragment"
         android:name="com.iwkms.drivenext.presentation.main.home.ui.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_loaderFragment"
+            app:destination="@id/loaderFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loaderFragment"
+        android:name="com.iwkms.drivenext.presentation.main.home.ui.LoaderFragment"
+        android:label="LoaderFragment"
+        tools:layout="@layout/fragment_loader">
+        <argument
+            android:name="searchQuery"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_loaderFragment_to_searchResultFragment"
+            app:destination="@id/searchResultFragment"
+            app:popUpTo="@id/loaderFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.iwkms.drivenext.presentation.main.home.ui.SearchResultFragment"
+        android:label="SearchResultFragment"
+        tools:layout="@layout/fragment_search_result">
+        <argument
+            android:name="searchQuery"
+            app:argType="string" />
+    </fragment>
+
     <fragment
         android:id="@+id/favoritesFragment"
         android:name="com.iwkms.drivenext.presentation.main.favorites.ui.FavoritesFragment"
