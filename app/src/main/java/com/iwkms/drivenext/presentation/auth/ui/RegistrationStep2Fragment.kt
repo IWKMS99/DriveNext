@@ -83,7 +83,7 @@ class RegistrationStep2Fragment : Fragment() {
             calendar.set(Calendar.MONTH, month)
             calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
-            val dateFormat = SimpleDateFormat("dd.MM.yyyy", Locale.getDefault())
+            val dateFormat = SimpleDateFormat("MM/dd/yyyy", Locale.getDefault())
             val formattedDate = dateFormat.format(calendar.time)
 
             binding.etBirthdate.setText(formattedDate)
