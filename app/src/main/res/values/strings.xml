@@ -1,115 +1,122 @@
-<resources>
-    <!-- Общее -->
+﻿<resources>
     <string name="app_name">DriveNext</string>
-    <string name="slogan" translatable="false">Поможем найти твою следующую поездку</string>
+    <string name="slogan">Helping you find your next ride</string>
 
-    <!-- Кнопки -->
-    <string name="btn_next" translatable="false">Далее</string>
-    <string name="btn_skip" translatable="false">Пропустить</string>
-    <string name="btn_get_started" translatable="false">Поехали</string>
-    <string name="btn_login" translatable="false">Войти</string>
-    <string name="btn_register" translatable="false">Зарегистрироваться</string>
-    <string name="btn_login_with_google" translatable="false">Войти через Google</string>
-    <string name="btn_retry" translatable="false">Повторить попытку</string>
+    <!-- Common -->
+    <string name="common_retry">Try again</string>
 
-    <!-- Экран "Нет подключения" -->
-    <string name="no_connection_title" translatable="false">Нет подключения к интернету</string>
-    <string name="no_connection_subtitle" translatable="false">Проверьте подключение и повторите попытку</string>
+    <!-- Buttons -->
+    <string name="btn_next">Next</string>
+    <string name="btn_skip">Skip</string>
+    <string name="btn_get_started">Let\'s go</string>
+    <string name="btn_login">Log in</string>
+    <string name="btn_register">Sign up</string>
+    <string name="btn_login_with_google">Continue with Google</string>
+    <string name="btn_retry">Retry</string>
+    <string name="car_card_details">Details</string>
+    <string name="car_card_book">Book</string>
+    <string name="car_details_book_button">Book this car</string>
+    <string name="booking_confirm_button">Confirm booking</string>
 
-    <!-- Онбординг -->
-    <string name="onboarding_1_title" translatable="false">Аренда автомобилей</string>
-    <string name="onboarding_1_subtitle" translatable="false">Открой для себя удобный и доступный способ передвижения</string>
-    <string name="onboarding_2_title" translatable="false">Безопасно и удобно</string>
-    <string name="onboarding_2_subtitle" translatable="false">Арендуй автомобиль и наслаждайся его удобством</string>
-    <string name="onboarding_3_title" translatable="false">Лучшие предложения</string>
-    <string name="onboarding_3_subtitle" translatable="false">Выбирай понравившееся среди сотен доступных автомобилей</string>
+    <!-- No connection -->
+    <string name="no_connection_title">No internet connection</string>
+    <string name="no_connection_subtitle">Check your network settings and try again</string>
+    <string name="no_connection_retry_error">Connection is still unavailable</string>
 
-    <!-- Авторизация -->
-    <string name="login_title" translatable="false">Войдите в аккаунт</string>
-    <string name="login_subtitle" translatable="false">Пожалуйста, введите свои данные</string>
-    <string name="hint_email" translatable="false">Электронная почта</string>
-    <string name="hint_password" translatable="false">Введите Пароль</string>
-    <string name="forgot_password" translatable="false">Забыли пароль?</string>
-    <string name="login_success_toast" translatable="false">Успешный вход!</string>
+    <!-- Onboarding -->
+    <string name="onboarding_1_title">Choose your perfect car</string>
+    <string name="onboarding_1_subtitle">Browse vehicles for any scenario and compare them in a single tap</string>
+    <string name="onboarding_2_title">Plan every detail</string>
+    <string name="onboarding_2_subtitle">Check availability, read specs and pick an offer that matches your budget</string>
+    <string name="onboarding_3_title">Start your next trip</string>
+    <string name="onboarding_3_subtitle">Save favorite cars and return to them whenever you are ready to travel</string>
 
-    <!-- Регистрация -->
-    <string name="register_title" translatable="false">Создать аккаунт</string>
-    <string name="hint_enter_email" translatable="false">Введите электронную почту</string>
-    <string name="hint_create_password" translatable="false">Придумайте пароль</string>
-    <string name="hint_repeat_password" translatable="false">Повторите пароль</string>
-    <string name="agree_terms" translatable="false">Я согласен с условиями обслуживания и политикой конфиденциальности</string>
-    <string name="hint_lastname" translatable="false">Фамилия</string>
-    <string name="hint_firstname" translatable="false">Имя</string>
-    <string name="hint_middlename" translatable="false">Отчество</string>
-    <string name="hint_birthdate" translatable="false">Дата рождения (ДД/ММ/ГГГГ)</string>
-    <string name="gender" translatable="false">Пол</string>
-    <string name="gender_male" translatable="false">Мужской</string>
-    <string name="gender_female" translatable="false">Женский</string>
-    <string name="register_photo_subtitle" translatable="false">Добавление фотографии поможет владельцам и арендаторам узнать друг друга, когда они будут забирать машину</string>
-    <string name="hint_driver_license_number" translatable="false">Номер водительского удостоверения</string>
-    <string name="hint_middlename_optional" translatable="false">Отчество (необязательно)</string>
-    <string name="hint_birthdate_label" translatable="false">Дата рождения</string>
-    <string name="hint_birthdate_format" translatable="false">ДД/ММ/ГГГГ</string>
-    <string name="hint_issue_date" translatable="false">Дата выдачи (ДД/ММ/ГГГГ)</string>
-    <string name="upload_driver_license_photo" translatable="false">Загрузите фото водительского удостоверения</string>
-    <string name="upload_passport_photo" translatable="false">Загрузите фото паспорта</string>
-    <string name="btn_upload_photo" translatable="false">Загрузить фото</string>
-    <string name="upload_photo_action" translatable="false">Загрузить фото</string>
+    <!-- Login -->
+    <string name="login_title">Welcome back</string>
+    <string name="login_subtitle">Sign in to continue</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_enter_email">Enter your email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_create_password">Enter your password</string>
+    <string name="hint_repeat_password">Repeat password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login_success_toast">Welcome aboard!</string>
+    <string name="login_error_invalid_credentials">Incorrect email or password</string>
+    <string name="login_error_unknown">Something went wrong. Please try again.</string>
+    <string name="google_sign_in_placeholder">Google sign-in will be available in lab 4</string>
 
-    <!-- Успешная регистрация -->
-    <string name="registration_success_title" translatable="false">Поздравляем</string>
-    <string name="registration_success_subtitle" translatable="false">Вы успешно зарегистрировались. Обработка ваших персональных данных займет около двух часов. Спасибо за ожидание.</string>
-    <string name="registration_success_header" translatable="false">Пользуйтесь с удовольствием</string>
+    <!-- Registration -->
+    <string name="register_title">Create account</string>
+    <string name="agree_terms">I accept the terms of service and privacy policy</string>
+    <string name="hint_lastname">Surname</string>
+    <string name="hint_firstname">Name</string>
+    <string name="hint_middlename">Middle name</string>
+    <string name="hint_middlename_optional">Middle name (optional)</string>
+    <string name="hint_birthdate_label">Date of birth</string>
+    <string name="hint_birthdate_format">MM/DD/YYYY</string>
+    <string name="gender">Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="register_photo_subtitle">Upload photo and documents</string>
+    <string name="hint_driver_license_number">Driver license number</string>
+    <string name="hint_issue_date">Issue date</string>
+    <string name="upload_driver_license_photo">Driver license photos</string>
+    <string name="upload_passport_photo">Passport photos</string>
+    <string name="upload_photo_action">Upload photo</string>
+    <string name="registration_success_header">All set</string>
+    <string name="registration_success_title">Registration complete</string>
+    <string name="registration_success_subtitle">You can now explore DriveNext</string>
+    <string name="error_invalid_email">Enter a valid email</string>
+    <string name="error_password_length">Password must be at least 6 characters</string>
+    <string name="error_passwords_do_not_match">Passwords do not match</string>
 
-    <!-- Сообщения об ошибках -->
-    <string name="error_invalid_email" translatable="false">Введите корректный адрес электронной почты</string>
-    <string name="error_passwords_do_not_match" translatable="false">Пароли не совпадают</string>
-    <string name="error_terms_not_accepted" translatable="false">Необходимо согласиться с условиями</string>
-    <string name="error_field_required" translatable="false">Поле не может быть пустым</string>
-    <string name="error_fill_all_fields" translatable="false">Пожалуйста, заполните все обязательные поля</string>
-    <string name="error_invalid_date" translatable="false">Введите корректную дату</string>
-    <string name="error_photo_required" translatable="false">Пожалуйста, загрузите все необходимые фото</string>
-    <string name="error_password_length" translatable="false">Пароль должен быть не менее 6 символов</string>
+    <!-- Home -->
+    <string name="home_search_hint">Search by make or model</string>
+    <string name="home_title">Recommended cars</string>
+    <string name="home_loading_error">Unable to load cars. Please try again.</string>
+    <string name="loader_text">Looking for matches…</string>
 
-    <!-- Google Sign-In -->
-    <string name="default_web_client_id" translatable="false">472168025259-ejhcih2mbegeaf7empphekr83ru10tjc.apps.googleusercontent.com</string>
+    <!-- Search -->
+    <string name="search_results_title">Search results</string>
+    <string name="no_search_results">No cars found for your query</string>
+    <string name="search_loading_error">Unable to load results. Please retry.</string>
 
-    <!-- Меню навигации -->
-    <string name="menu_home" translatable="false">Главная</string>
-    <string name="menu_favorites" translatable="false">Избранное</string>
-    <string name="menu_settings" translatable="false">Настройки</string>
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_my_bookings">My bookings</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_connect_car">Add your car</string>
+    <string name="settings_help">Help</string>
+    <string name="settings_invite_friend">Invite a friend</string>
+    <string name="settings_notifications_on">Enabled</string>
+    <string name="settings_notifications_off">Disabled</string>
+    <string name="theme_system">System default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_settings">Settings</string>
 
-    <!-- Экран Настройки -->
-    <string name="settings_title" translatable="false">Настройки</string>
-    <string name="settings_my_bookings" translatable="false">Мои бронирования</string>
-    <string name="settings_theme" translatable="false">Тема</string>
-    <string name="settings_notifications" translatable="false">Уведомления</string>
-    <string name="settings_connect_car" translatable="false">Подключить свой автомобиль</string>
-    <string name="settings_help" translatable="false">Помощь</string>
-    <string name="settings_invite_friend" translatable="false">Пригласи друга</string>
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_joined_date">Member since %1$s</string>
+    <string name="profile_logout">Log out</string>
+    <string name="profile_camera_permission_denied">Allow camera access to take a profile photo.</string>
+    <string name="profile_gallery_permission_denied">Allow gallery access to select a profile photo.</string>
+    <string name="profile_photo_camera">Take a photo</string>
+    <string name="profile_photo_gallery">Choose from gallery</string>
+    <string name="profile_photo_dialog_title">Update avatar</string>
+    <string name="permission_camera_required">Camera permission is required to continue.</string>
+    <string name="permission_gallery_required">Gallery permission is required to continue.</string>
 
-    <!-- Экран Профиль -->
-    <string name="profile_title" translatable="false">Профиль</string>
-    <string name="profile_joined_date" translatable="false">Присоединился в июле 2024</string>
-    <string name="profile_email_label" translatable="false">Электронная почта</string>
-    <string name="profile_password_label" translatable="false">Пароль</string>
-    <string name="profile_change_password" translatable="false">Поменять пароль</string>
-    <string name="profile_gender_label" translatable="false">Пол</string>
-    <string name="profile_google_label" translatable="false">Google</string>
-    <string name="profile_logout" translatable="false">Выйти из профиля</string>
+    <!-- Car details -->
+    <string name="car_card_price_per_day">%1$s / day</string>
+    <string name="car_details_specs">Transmission: %1$s\nFuel: %2$s</string>
+    <string name="car_details_placeholder_description">Detailed description for %1$s will be added later.</string>
 
-    <!-- Экран Главная -->
-    <string name="home_search_hint" translatable="false">Введите марку автомобиля</string>
-    <string name="home_title" translatable="false">Давайте найдем автомобиль</string>
-    <string name="car_card_price_suffix" translatable="false">в день</string>
-    <string name="car_card_book" translatable="false">Забронировать</string>
-    <string name="car_card_details" translatable="false">Детали</string>\
-
-    <!-- Экран Загрузки -->
-    <string name="loader_text" translatable="false">Ищем подходящие автомобили</string>
-
-    <!-- Экран Результата Поиска -->
-    <string name="search_results_title" translatable="false">Результаты поиска</string>
-    <string name="no_search_results" translatable="false">По вашему запросу ничего не найдено</string>
-
+    <!-- Booking -->
+    <string name="booking_title">Booking %1$s %2$s</string>
+    <string name="booking_summary">You are booking %1$s %2$s for %3$s per day.</string>
+    <string name="booking_coming_soon">Online booking will be available soon</string>
 </resources>

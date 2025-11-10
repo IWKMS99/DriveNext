@@ -1,4 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+﻿<resources>
     <string name="app_name">DriveNext</string>
+    <string name="slogan">Поможем найти твою следующую поездку</string>
+
+    <string name="common_retry">Повторить попытку</string>
+
+    <string name="btn_next">Далее</string>
+    <string name="btn_skip">Пропустить</string>
+    <string name="btn_get_started">Поехали</string>
+    <string name="btn_login">Войти</string>
+    <string name="btn_register">Зарегистрироваться</string>
+    <string name="btn_login_with_google">Войти через Google</string>
+    <string name="btn_retry">Повторить</string>
+    <string name="car_card_details">Детали</string>
+    <string name="car_card_book">Забронировать</string>
+    <string name="car_details_book_button">Забронировать автомобиль</string>
+    <string name="booking_confirm_button">Подтвердить бронь</string>
+
+    <string name="no_connection_title">Нет подключения к интернету</string>
+    <string name="no_connection_subtitle">Проверьте подключение и попробуйте снова</string>
+    <string name="no_connection_retry_error">Подключение всё ещё отсутствует</string>
+
+    <string name="onboarding_1_title">Выбирайте идеальный автомобиль</string>
+    <string name="onboarding_1_subtitle">Сравнивайте варианты для любых поездок и бюджетов</string>
+    <string name="onboarding_2_title">Продумывайте детали</string>
+    <string name="onboarding_2_subtitle">Следите за доступностью и характеристиками в одном месте</string>
+    <string name="onboarding_3_title">Готовьтесь к поездке</string>
+    <string name="onboarding_3_subtitle">Сохраняйте избранное и возвращайтесь к нему когда будете готовы</string>
+
+    <string name="login_title">С возвращением</string>
+    <string name="login_subtitle">Войдите, чтобы продолжить</string>
+    <string name="hint_email">Почта</string>
+    <string name="hint_enter_email">Введите адрес электронной почты</string>
+    <string name="hint_password">Пароль</string>
+    <string name="hint_create_password">Введите пароль</string>
+    <string name="hint_repeat_password">Повторите пароль</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="login_success_toast">Рады видеть вас снова!</string>
+    <string name="login_error_invalid_credentials">Неверный email или пароль</string>
+    <string name="login_error_unknown">Что-то пошло не так. Попробуйте ещё раз.</string>
+    <string name="google_sign_in_placeholder">Вход через Google появится в 4 лабораторной</string>
+
+    <string name="register_title">Создать аккаунт</string>
+    <string name="agree_terms">Я принимаю условия использования и политику конфиденциальности</string>
+    <string name="hint_lastname">Фамилия</string>
+    <string name="hint_firstname">Имя</string>
+    <string name="hint_middlename">Отчество</string>
+    <string name="hint_middlename_optional">Отчество (необязательно)</string>
+    <string name="hint_birthdate_label">Дата рождения</string>
+    <string name="hint_birthdate_format">MM/DD/YYYY</string>
+    <string name="gender">Пол</string>
+    <string name="gender_male">Мужской</string>
+    <string name="gender_female">Женский</string>
+    <string name="register_photo_subtitle">Загрузите фото и документы</string>
+    <string name="hint_driver_license_number">Номер водительского удостоверения</string>
+    <string name="hint_issue_date">Дата выдачи</string>
+    <string name="upload_driver_license_photo">Фото ВУ</string>
+    <string name="upload_passport_photo">Фото паспорта</string>
+    <string name="upload_photo_action">Загрузить фото</string>
+    <string name="registration_success_header">Готово</string>
+    <string name="registration_success_title">Регистрация завершена</string>
+    <string name="registration_success_subtitle">Можно переходить к приложению DriveNext</string>
+    <string name="error_invalid_email">Введите корректный email</string>
+    <string name="error_password_length">Минимум 6 символов</string>
+    <string name="error_passwords_do_not_match">Пароли не совпадают</string>
+
+    <string name="home_search_hint">Поиск по марке или модели</string>
+    <string name="home_title">Рекомендованные авто</string>
+    <string name="home_loading_error">Не удалось загрузить автомобили. Попробуйте ещё раз.</string>
+    <string name="loader_text">Ищем подходящие варианты…</string>
+
+    <string name="search_results_title">Результаты поиска</string>
+    <string name="no_search_results">По вашему запросу ничего не найдено</string>
+    <string name="search_loading_error">Не удалось загрузить результаты. Попробуйте ещё раз.</string>
+
+    <string name="settings_title">Настройки</string>
+    <string name="settings_my_bookings">Мои бронирования</string>
+    <string name="settings_theme">Тема</string>
+    <string name="settings_notifications">Уведомления</string>
+    <string name="settings_connect_car">Подключить автомобиль</string>
+    <string name="settings_help">Помощь</string>
+    <string name="settings_invite_friend">Пригласить друга</string>
+    <string name="settings_notifications_on">Включены</string>
+    <string name="settings_notifications_off">Отключены</string>
+    <string name="theme_system">Как в системе</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="menu_home">Главная</string>
+    <string name="menu_favorites">Избранное</string>
+    <string name="menu_settings">Настройки</string>
+
+    <string name="profile_title">Профиль</string>
+    <string name="profile_joined_date">С нами с %1$s года</string>
+    <string name="profile_logout">Выйти из профиля</string>
+    <string name="profile_camera_permission_denied">Разрешите доступ к камере, чтобы сделать фото.</string>
+    <string name="profile_gallery_permission_denied">Разрешите доступ к галерее, чтобы выбрать фото.</string>
+    <string name="profile_photo_camera">Сделать фото</string>
+    <string name="profile_photo_gallery">Выбрать из галереи</string>
+    <string name="profile_photo_dialog_title">Обновить аватар</string>
+    <string name="permission_camera_required">Нужно разрешить доступ к камере.</string>
+    <string name="permission_gallery_required">Нужно разрешить доступ к галерее.</string>
+
+    <string name="car_card_price_per_day">%1$s / сутки</string>
+    <string name="car_details_specs">Трансмиссия: %1$s\nТопливо: %2$s</string>
+    <string name="car_details_placeholder_description">Расширенное описание %1$s появится позже.</string>
+
+    <string name="booking_title">Бронирование %1$s %2$s</string>
+    <string name="booking_summary">Вы бронируете %1$s %2$s по цене %3$s в сутки.</string>
+    <string name="booking_coming_soon">Онлайн-бронирование появится позже</string>
 </resources>

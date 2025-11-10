@@ -1,4 +1,120 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
+﻿<resources>
     <string name="app_name">DriveNext</string>
+    <string name="slogan">Helping you find your next ride</string>
+
+    <!-- Common -->
+    <string name="common_retry">Try again</string>
+
+    <!-- Buttons -->
+    <string name="btn_next">Next</string>
+    <string name="btn_skip">Skip</string>
+    <string name="btn_get_started">Let\'s go</string>
+    <string name="btn_login">Log in</string>
+    <string name="btn_register">Sign up</string>
+    <string name="btn_login_with_google">Continue with Google</string>
+    <string name="btn_retry">Retry</string>
+    <string name="car_card_details">Details</string>
+    <string name="car_card_book">Book</string>
+    <string name="car_details_book_button">Book this car</string>
+    <string name="booking_confirm_button">Confirm booking</string>
+
+    <!-- No connection -->
+    <string name="no_connection_title">No internet connection</string>
+    <string name="no_connection_subtitle">Check your network settings and try again</string>
+    <string name="no_connection_retry_error">Connection is still unavailable</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_1_title">Choose your perfect car</string>
+    <string name="onboarding_1_subtitle">Browse vehicles for any scenario and compare them in a single tap</string>
+    <string name="onboarding_2_title">Plan every detail</string>
+    <string name="onboarding_2_subtitle">Check availability, read specs and pick an offer that matches your budget</string>
+    <string name="onboarding_3_title">Start your next trip</string>
+    <string name="onboarding_3_subtitle">Save favorite cars and return to them whenever you are ready to travel</string>
+
+    <!-- Login -->
+    <string name="login_title">Welcome back</string>
+    <string name="login_subtitle">Sign in to continue</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_enter_email">Enter your email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_create_password">Enter your password</string>
+    <string name="hint_repeat_password">Repeat password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login_success_toast">Welcome aboard!</string>
+    <string name="login_error_invalid_credentials">Incorrect email or password</string>
+    <string name="login_error_unknown">Something went wrong. Please try again.</string>
+    <string name="google_sign_in_placeholder">Google sign-in will be available in lab 4</string>
+
+    <!-- Registration -->
+    <string name="register_title">Create account</string>
+    <string name="agree_terms">I accept the terms of service and privacy policy</string>
+    <string name="hint_lastname">Surname</string>
+    <string name="hint_firstname">Name</string>
+    <string name="hint_middlename">Middle name</string>
+    <string name="hint_middlename_optional">Middle name (optional)</string>
+    <string name="hint_birthdate_label">Date of birth</string>
+    <string name="hint_birthdate_format">MM/DD/YYYY</string>
+    <string name="gender">Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="register_photo_subtitle">Upload photo and documents</string>
+    <string name="hint_driver_license_number">Driver license number</string>
+    <string name="hint_issue_date">Issue date</string>
+    <string name="upload_driver_license_photo">Driver license photos</string>
+    <string name="upload_passport_photo">Passport photos</string>
+    <string name="upload_photo_action">Upload photo</string>
+    <string name="registration_success_header">All set</string>
+    <string name="registration_success_title">Registration complete</string>
+    <string name="registration_success_subtitle">You can now explore DriveNext</string>
+    <string name="error_invalid_email">Enter a valid email</string>
+    <string name="error_password_length">Password must be at least 6 characters</string>
+    <string name="error_passwords_do_not_match">Passwords do not match</string>
+
+    <!-- Home -->
+    <string name="home_search_hint">Search by make or model</string>
+    <string name="home_title">Recommended cars</string>
+    <string name="home_loading_error">Unable to load cars. Please try again.</string>
+    <string name="loader_text">Looking for matches…</string>
+
+    <!-- Search -->
+    <string name="search_results_title">Search results</string>
+    <string name="no_search_results">No cars found for your query</string>
+    <string name="search_loading_error">Unable to load results. Please retry.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_my_bookings">My bookings</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_connect_car">Add your car</string>
+    <string name="settings_help">Help</string>
+    <string name="settings_invite_friend">Invite a friend</string>
+    <string name="settings_notifications_on">Enabled</string>
+    <string name="settings_notifications_off">Disabled</string>
+    <string name="theme_system">System default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_joined_date">Member since %1$s</string>
+    <string name="profile_logout">Log out</string>
+    <string name="profile_camera_permission_denied">Allow camera access to take a profile photo.</string>
+    <string name="profile_gallery_permission_denied">Allow gallery access to select a profile photo.</string>
+    <string name="profile_photo_camera">Take a photo</string>
+    <string name="profile_photo_gallery">Choose from gallery</string>
+    <string name="profile_photo_dialog_title">Update avatar</string>
+    <string name="permission_camera_required">Camera permission is required to continue.</string>
+    <string name="permission_gallery_required">Gallery permission is required to continue.</string>
+
+    <!-- Car details -->
+    <string name="car_card_price_per_day">%1$s / day</string>
+    <string name="car_details_specs">Transmission: %1$s\nFuel: %2$s</string>
+    <string name="car_details_placeholder_description">Detailed description for %1$s will be added later.</string>
+
+    <!-- Booking -->
+    <string name="booking_title">Booking %1$s %2$s</string>
+    <string name="booking_summary">You are booking %1$s %2$s for %3$s per day.</string>
+    <string name="booking_coming_soon">Online booking will be available soon</string>
 </resources>
+
