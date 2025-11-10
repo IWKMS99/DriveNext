@@ -54,7 +54,16 @@
         android:textColor="@color/text_primary"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:text="Иван Иванов" />
+        tools:text="Alexey Vlasov" />
+
+    <TextView
+        android:id="@+id/tv_user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/text_secondary"
+        tools:text="demo@drivenext.ru" />
 
     <TextView
         android:id="@+id/tv_joined_date"
