@@ -8,11 +8,14 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.iwkms.drivenext.R
+import com.iwkms.drivenext.data.repository.SessionRepositoryProvider
 import com.iwkms.drivenext.databinding.FragmentOnboardingBinding
 import com.iwkms.drivenext.presentation.onboarding.adapter.OnboardingAdapter
+import kotlinx.coroutines.launch
 
 class OnboardingFragment : Fragment() {
 
@@ -20,6 +23,9 @@ class OnboardingFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var onboardingPages: List<Fragment>
+    private val sessionRepository by lazy {
+        SessionRepositoryProvider.get(requireContext().applicationContext)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -136,7 +142,10 @@ class OnboardingFragment : Fragment() {
     }
 
     private fun navigateToAuth() {
-        findNavController().navigate(R.id.action_onboardingFragment_to_authFragment)
+        viewLifecycleOwner.lifecycleScope.launch {
+            sessionRepository.setOnboardingCompleted(true)
+            findNavController().navigate(R.id.action_onboardingFragment_to_authFragment)
+        }
     }
 
     override fun onDestroyView() {
