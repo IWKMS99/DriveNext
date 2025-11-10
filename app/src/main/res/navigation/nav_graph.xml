@@ -137,6 +137,25 @@
         android:name="com.iwkms.drivenext.presentation.main.favorites.ui.FavoritesFragment"
         android:label="FavoritesFragment"
         tools:layout="@layout/fragment_favorites"/>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.iwkms.drivenext.presentation.main.settings.ui.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/myBookingsFragment"
+        android:name="com.iwkms.drivenext.presentation.main.settings.ui.MyBookingsFragment"
+        android:label="MyBookingsFragment"
+        tools:layout="@layout/fragment_my_bookings" />
+
+    <fragment
+        android:id="@+id/connectCarFragment"
+        android:name="com.iwkms.drivenext.presentation.main.settings.ui.ConnectCarFragment"
+        android:label="ConnectCarFragment"
+        tools:layout="@layout/fragment_connect_car" />
+
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.iwkms.drivenext.presentation.main.settings.ui.SettingsFragment"
@@ -145,12 +164,13 @@
         <action
             android:id="@+id/action_settingsFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_myBookingsFragment"
+            app:destination="@id/myBookingsFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_connectCarFragment"
+            app:destination="@id/connectCarFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.iwkms.drivenext.presentation.main.settings.ui.ProfileFragment"
-        android:label="ProfileFragment"
-        tools:layout="@layout/fragment_profile"/>
 
     <action android:id="@+id/action_global_authFragment"
         app:destination="@id/authFragment"

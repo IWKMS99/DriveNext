@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import coil.load
+import coil.transform.CircleCropTransformation
 import com.iwkms.drivenext.R
 import com.iwkms.drivenext.databinding.FragmentSettingsBinding
 import com.iwkms.drivenext.presentation.main.settings.adapter.SettingsAdapter
@@ -35,8 +37,17 @@ class SettingsFragment : Fragment() {
 
     private fun setupRecyclerView() {
         settingsAdapter = SettingsAdapter { item ->
-            // TODO: Handle clicks on settings items
-            Toast.makeText(requireContext(), getString(item.titleResId), Toast.LENGTH_SHORT).show()
+            when (item.titleResId) {
+                R.string.settings_my_bookings -> {
+                    findNavController().navigate(R.id.action_settingsFragment_to_myBookingsFragment)
+                }
+                R.string.settings_connect_car -> {
+                    findNavController().navigate(R.id.action_settingsFragment_to_connectCarFragment)
+                }
+                else -> {
+                    Toast.makeText(requireContext(), getString(item.titleResId), Toast.LENGTH_SHORT).show()
+                }
+            }
         }
         binding.rvSettings.apply {
             adapter = settingsAdapter
@@ -54,7 +65,14 @@ class SettingsFragment : Fragment() {
         viewModel.settingsItems.observe(viewLifecycleOwner) { items ->
             settingsAdapter.submitList(items)
         }
-        // TODO: Observe user data to update header
+        viewModel.user.observe(viewLifecycleOwner) { user ->
+            binding.tvUserName.text = user.name
+            binding.tvUserEmail.text = user.email
+            binding.ivAvatar.load(user.avatarUrl ?: R.drawable.ic_profile_placeholder) {
+                crossfade(true)
+                transformations(CircleCropTransformation())
+            }
+        }
     }
 
     override fun onDestroyView() {

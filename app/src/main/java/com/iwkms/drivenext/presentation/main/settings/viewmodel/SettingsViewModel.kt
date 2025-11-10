@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.iwkms.drivenext.R
+import com.iwkms.drivenext.domain.model.User
 import com.iwkms.drivenext.presentation.main.settings.model.SettingsItem
 
 class SettingsViewModel : ViewModel() {
@@ -11,8 +12,21 @@ class SettingsViewModel : ViewModel() {
     private val _settingsItems = MutableLiveData<List<SettingsItem>>()
     val settingsItems: LiveData<List<SettingsItem>> get() = _settingsItems
 
+    private val _user = MutableLiveData<User>()
+    val user: LiveData<User> get() = _user
+
     init {
         loadSettingsItems()
+        loadUserData()
+    }
+
+    private fun loadUserData() {
+        _user.value = User(
+            name = "Иван Иванов",
+            email = "ivan@mtuci.ru",
+            avatarUrl = null,
+            joinedDate = "Присоединился в июле 2024"
+        )
     }
 
     private fun loadSettingsItems() {
