@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".presentation.main.home.ui.HomeFragment">
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_search"
         style="@style/Widget.DriveNext.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="24dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
+        android:layout_marginEnd="24dp"
         android:hint="@string/home_search_hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:startIconCheckable="false"
         app:startIconDrawable="@drawable/ic_search"
         app:startIconTint="@color/text_secondary">
@@ -26,15 +28,13 @@
             android:layout_height="wrap_content"
             android:imeOptions="actionSearch"
             android:inputType="text"
-
             android:paddingStart="48dp"
             android:paddingEnd="16dp" />
 
-
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <TextView
+        android:id="@+id/tv_home_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -42,14 +42,68 @@
         android:text="@string/home_title"
         android:textColor="@color/text_primary"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_search" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_cars"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        android:paddingHorizontal="16dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_car_card" />
-</LinearLayout>
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_home_title">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_cars"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_car_card" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/error_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="@string/home_loading_error" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_retry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/common_retry"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

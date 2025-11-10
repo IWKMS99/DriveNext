@@ -3,9 +3,9 @@ package com.iwkms.drivenext.presentation.main.home.ui
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.inputmethod.EditorInfo
 import android.view.ViewGroup
-import android.widget.Toast
+import android.view.inputmethod.EditorInfo
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -14,6 +14,7 @@ import com.iwkms.drivenext.presentation.main.home.adapter.CarAdapter
 import com.iwkms.drivenext.presentation.main.home.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment() {
+
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
@@ -39,20 +40,15 @@ class HomeFragment : Fragment() {
     private fun setupRecyclerView() {
         carAdapter = CarAdapter(
             onBookClick = { car ->
-                Toast.makeText(requireContext(), "Бронирование ${car.model}", Toast.LENGTH_SHORT)
-                    .show()
+                val action = HomeFragmentDirections.actionHomeFragmentToBookingFragment(car.id)
+                findNavController().navigate(action)
             },
             onDetailsClick = { car ->
-                Toast.makeText(requireContext(), "Детали ${car.model}", Toast.LENGTH_SHORT).show()
+                val action = HomeFragmentDirections.actionHomeFragmentToCarDetailsFragment(car.id)
+                findNavController().navigate(action)
             }
         )
         binding.rvCars.adapter = carAdapter
-    }
-
-    private fun setupObservers() {
-        viewModel.cars.observe(viewLifecycleOwner) { cars ->
-            carAdapter.submitList(cars)
-        }
     }
 
     private fun setupListeners() {
@@ -60,13 +56,46 @@ class HomeFragment : Fragment() {
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                 val searchQuery = textView.text.toString().trim()
                 if (searchQuery.isNotEmpty()) {
-                    val action =
-                        HomeFragmentDirections.actionHomeFragmentToLoaderFragment(searchQuery)
+                    val action = HomeFragmentDirections.actionHomeFragmentToLoaderFragment(searchQuery)
                     findNavController().navigate(action)
                 }
                 return@setOnEditorActionListener true
             }
-            return@setOnEditorActionListener false
+            false
+        }
+
+        binding.btnRetry.setOnClickListener {
+            viewModel.reload()
+        }
+    }
+
+    private fun setupObservers() {
+        viewModel.cars.observe(viewLifecycleOwner) { cars ->
+            if (cars.isNotEmpty()) {
+                binding.rvCars.isVisible = true
+                carAdapter.submitList(cars)
+            } else {
+                binding.rvCars.isVisible = false
+            }
+        }
+
+        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            binding.progressBar.isVisible = isLoading
+            if (isLoading) {
+                binding.errorContainer.isVisible = false
+                binding.rvCars.isVisible = false
+            } else if (viewModel.errorResId.value == null) {
+                binding.rvCars.isVisible = viewModel.cars.value?.isNotEmpty() == true
+            }
+        }
+
+        viewModel.errorResId.observe(viewLifecycleOwner) { errorResId ->
+            val hasError = errorResId != null
+            binding.errorContainer.isVisible = hasError
+            binding.rvCars.isVisible = !hasError && (viewModel.cars.value?.isNotEmpty() == true)
+            if (hasError && errorResId != null) {
+                binding.tvError.setText(errorResId)
+            }
         }
     }
 
