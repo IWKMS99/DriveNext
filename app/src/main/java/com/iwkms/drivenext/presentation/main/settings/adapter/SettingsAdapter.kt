@@ -2,6 +2,7 @@ package com.iwkms.drivenext.presentation.main.settings.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -21,21 +22,24 @@ class SettingsAdapter(
         holder.bind(getItem(position))
     }
 
-    inner class SettingsViewHolder(private val binding: ItemSettingBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class SettingsViewHolder(
+        private val binding: ItemSettingBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: SettingsItem) {
             binding.ivIcon.setImageResource(item.iconResId)
             binding.tvTitle.setText(item.titleResId)
+            val valueText = item.value ?: item.valueResId?.let { binding.tvValue.context.getString(it) }
+            binding.tvValue.isVisible = !valueText.isNullOrBlank()
+            binding.tvValue.text = valueText
             binding.root.setOnClickListener { onItemClick(item) }
         }
     }
 
     class SettingsDiffCallback : DiffUtil.ItemCallback<SettingsItem>() {
-        override fun areItemsTheSame(oldItem: SettingsItem, newItem: SettingsItem): Boolean {
-            return oldItem.titleResId == newItem.titleResId
-        }
+        override fun areItemsTheSame(oldItem: SettingsItem, newItem: SettingsItem): Boolean =
+            oldItem.titleResId == newItem.titleResId
 
-        override fun areContentsTheSame(oldItem: SettingsItem, newItem: SettingsItem): Boolean {
-            return oldItem == newItem
-        }
+        override fun areContentsTheSame(oldItem: SettingsItem, newItem: SettingsItem): Boolean =
+            oldItem == newItem
     }
 }

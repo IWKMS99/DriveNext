@@ -5,5 +5,7 @@ import androidx.annotation.StringRes
 
 data class SettingsItem(
     @DrawableRes val iconResId: Int,
-    @StringRes val titleResId: Int
+    @StringRes val titleResId: Int,
+    val value: String? = null,
+    @StringRes val valueResId: Int? = null
 )

@@ -13,8 +13,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_theme"
-        app:tint="@color/text_secondary"/>
+        app:tint="@color/text_secondary"
+        tools:src="@drawable/ic_theme" />
 
     <TextView
         android:id="@+id/tv_title"
@@ -24,10 +24,23 @@
         android:textColor="@color/text_primary"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/iv_arrow"
+        app:layout_constraintEnd_toStartOf="@id/tv_value"
         app:layout_constraintStart_toEndOf="@id/iv_icon"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Тема" />
+        tools:text="@string/settings_theme" />
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Вкл."
+        tools:visibility="visible" />
 
     <ImageView
         android:id="@+id/iv_arrow"
@@ -37,5 +50,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/text_secondary"/>
+        app:tint="@color/text_secondary" />
 </androidx.constraintlayout.widget.ConstraintLayout>
