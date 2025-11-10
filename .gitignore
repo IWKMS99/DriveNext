@@ -15,3 +15,5 @@
 local.properties
 *.py
 *.txt
+AGENTS.md
+*.docx
