@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
+import com.iwkms.drivenext.R
 import com.iwkms.drivenext.databinding.FragmentNoConnectionBinding
+import com.iwkms.drivenext.presentation.common.util.NetworkUtils
 
 class NoConnectionFragment : Fragment() {
 
@@ -14,7 +17,8 @@ class NoConnectionFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentNoConnectionBinding.inflate(inflater, container, false)
@@ -25,7 +29,15 @@ class NoConnectionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnRetry.setOnClickListener {
-            Toast.makeText(requireContext(), "Проверка подключения...", Toast.LENGTH_SHORT).show()
+            if (NetworkUtils.isOnline(requireContext())) {
+                findNavController().navigateUp()
+            } else {
+                Snackbar.make(
+                    binding.root,
+                    getString(R.string.no_connection_retry_error),
+                    Snackbar.LENGTH_SHORT
+                ).show()
+            }
         }
     }
 
