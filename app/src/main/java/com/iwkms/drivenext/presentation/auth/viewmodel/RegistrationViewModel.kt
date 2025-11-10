@@ -4,6 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.iwkms.drivenext.domain.model.User
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.util.Locale
 import java.util.regex.Pattern
 
 class RegistrationViewModel : ViewModel() {
@@ -75,7 +79,7 @@ class RegistrationViewModel : ViewModel() {
     private fun validateStep2() {
         val isLastNameValid = !lastName.value.isNullOrBlank()
         val isFirstNameValid = !firstName.value.isNullOrBlank()
-        val isBirthDateValid = !birthDate.value.isNullOrBlank()
+        val isBirthDateValid = birthDate.value?.let { isValidDate(it, BIRTHDATE_PATTERN) } ?: false
         val isGenderSelected = selectedGenderId.value != null && selectedGenderId.value != -1
 
         _step2ValidationState.value = Step2ValidationState(
@@ -85,13 +89,50 @@ class RegistrationViewModel : ViewModel() {
 
     private fun validateStep3() {
         val isLicenseNumberValid = !licenseNumber.value.isNullOrBlank()
-        val isIssueDateValid = !issueDate.value.isNullOrBlank()
+        val isIssueDateValid = issueDate.value?.let { isValidDate(it, ISSUE_DATE_PATTERN) } ?: false
         val areRequiredPhotosUploaded =
             !licensePhotoUri.value.isNullOrBlank() && !passportPhotoUri.value.isNullOrBlank()
 
         _step3ValidationState.value = Step3ValidationState(
             isNextButtonEnabled = isLicenseNumberValid && isIssueDateValid && areRequiredPhotosUploaded
         )
+    }
+
+    fun buildRegistrationSummary(): RegistrationSummary? {
+        val emailValue = email.value?.takeIf { it.isNotBlank() } ?: return null
+        val passwordValue = password.value?.takeIf { it.length >= MIN_PASSWORD_LENGTH } ?: return null
+        val firstNameValue = firstName.value?.trim().orEmpty()
+        val lastNameValue = lastName.value?.trim().orEmpty()
+        if (firstNameValue.isEmpty() || lastNameValue.isEmpty()) return null
+
+        val middleNameValue = middleName.value?.takeIf { it.isNotBlank() }
+        val displayName = buildString {
+            append(firstNameValue)
+            middleNameValue?.let {
+                append(" ")
+                append(it)
+            }
+            append(" ")
+            append(lastNameValue)
+        }.trim()
+
+        val joinedDate = LocalDate.now().year.toString()
+
+        val user = User(
+            name = displayName,
+            email = emailValue,
+            avatarUrl = profilePhotoUri.value,
+            joinedDate = joinedDate
+        )
+        return RegistrationSummary(user = user, password = passwordValue)
+    }
+
+    private fun isValidDate(value: String, pattern: String): Boolean {
+        return runCatching {
+            val formatter = SimpleDateFormat(pattern, Locale.getDefault())
+            formatter.isLenient = false
+            formatter.parse(value)
+        }.isSuccess
     }
 
     private fun isValidEmail(email: String): Boolean {
@@ -121,4 +162,15 @@ class RegistrationViewModel : ViewModel() {
     data class Step3ValidationState(
         val isNextButtonEnabled: Boolean = false
     )
+
+    data class RegistrationSummary(
+        val user: User,
+        val password: String
+    )
+
+    companion object {
+        private const val MIN_PASSWORD_LENGTH = 6
+        private const val BIRTHDATE_PATTERN = "MM/dd/yyyy"
+        private const val ISSUE_DATE_PATTERN = "dd/MM/yyyy"
+    }
 }
