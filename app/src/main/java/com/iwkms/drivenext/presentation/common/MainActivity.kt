@@ -6,23 +6,34 @@ import android.net.Network
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.iwkms.drivenext.R
+import com.iwkms.drivenext.data.repository.SessionRepositoryProvider
 import com.iwkms.drivenext.databinding.ActivityMainBinding
+import com.iwkms.drivenext.presentation.common.theme.ThemeManager
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
+    private lateinit var sessionRepository: com.iwkms.drivenext.domain.repository.SessionRepository
     private var connectivityManager: ConnectivityManager? = null
     private var networkCallback: ConnectivityManager.NetworkCallback? = null
     private var isShowingNoConnection = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        sessionRepository = SessionRepositoryProvider.get(applicationContext)
+        runBlocking {
+            ThemeManager.apply(sessionRepository.themeFlow.first())
+        }
 
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -55,6 +66,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         monitorConnectivity()
+        observeThemeChanges()
+    }
+
+    private fun observeThemeChanges() {
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                sessionRepository.themeFlow.collect { ThemeManager.apply(it) }
+            }
+        }
     }
 
     @SuppressLint("MissingPermission")
