@@ -11,6 +11,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.FileProvider
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -21,6 +22,7 @@ import com.iwkms.drivenext.databinding.FragmentProfileBinding
 import com.iwkms.drivenext.presentation.main.settings.viewmodel.ProfileViewModel
 import com.iwkms.drivenext.presentation.main.settings.viewmodel.ProfileViewModelFactory
 import java.io.File
+import java.io.FileOutputStream
 
 class ProfileFragment : Fragment() {
 
@@ -177,7 +179,26 @@ class ProfileFragment : Fragment() {
     }
 
     private fun onImagePicked(uri: Uri) {
-        viewModel.updateAvatar(uri)
+        val storedUri = saveImageToInternalStorage(uri)
+        if (storedUri != null) {
+            viewModel.updateAvatar(storedUri)
+        } else {
+            showPermissionError(R.string.profile_gallery_permission_denied)
+        }
+    }
+
+    private fun saveImageToInternalStorage(source: Uri): Uri? {
+        return runCatching {
+            val resolver = requireContext().contentResolver
+            val avatarsDir = File(requireContext().filesDir, "avatars").apply { mkdirs() }
+            val destination = File(avatarsDir, "avatar_${System.currentTimeMillis()}.jpg")
+            resolver.openInputStream(source)?.use { input ->
+                FileOutputStream(destination).use { output ->
+                    input.copyTo(output)
+                }
+            } ?: return null
+            destination.toUri()
+        }.getOrNull()
     }
 
     private fun showPermissionError(messageResId: Int) {
