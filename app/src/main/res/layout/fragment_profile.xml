@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingStart="@dimen/screen_padding"
+    android:paddingEnd="@dimen/screen_padding"
+    android:paddingBottom="@dimen/screen_padding"
+    android:clipToPadding="false"
     android:orientation="vertical"
     tools:context=".presentation.main.settings.ui.ProfileFragment">
 
@@ -27,7 +31,7 @@
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="@dimen/screen_top_spacing"
             android:text="@string/profile_title"
             android:textColor="@color/text_primary"
             android:textSize="18sp"
