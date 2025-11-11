@@ -94,6 +94,9 @@
     <string name="theme_system">System default</string>
     <string name="theme_light">Light</string>
     <string name="theme_dark">Dark</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_favorites">Favorites</string>
+    <string name="menu_settings">Settings</string>
 
     <!-- Profile -->
     <string name="profile_title">Profile</string>
