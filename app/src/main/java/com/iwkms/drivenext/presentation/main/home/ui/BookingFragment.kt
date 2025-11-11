@@ -12,6 +12,7 @@ import com.iwkms.drivenext.R
 import com.iwkms.drivenext.data.repository.FakeCarRepository
 import com.iwkms.drivenext.databinding.FragmentBookingBinding
 import com.iwkms.drivenext.domain.repository.CarRepository
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 
 class BookingFragment : Fragment() {
 
@@ -38,6 +39,8 @@ class BookingFragment : Fragment() {
             findNavController().navigateUp()
             return
         }
+
+        binding.root.applyStatusBarPadding()
 
         binding.btnBack.setOnClickListener {
             findNavController().navigateUp()
