@@ -23,6 +23,7 @@ import coil.transform.CircleCropTransformation
 import com.iwkms.drivenext.R
 import com.iwkms.drivenext.databinding.FragmentRegistrationStep3Binding
 import com.iwkms.drivenext.presentation.auth.viewmodel.RegistrationViewModel
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -90,6 +91,7 @@ class RegistrationStep3Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
         restoreState()
         setupListeners()
         setupObservers()

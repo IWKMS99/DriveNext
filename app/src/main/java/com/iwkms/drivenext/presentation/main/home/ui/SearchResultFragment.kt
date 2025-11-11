@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.iwkms.drivenext.databinding.FragmentSearchResultBinding
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 import com.iwkms.drivenext.presentation.main.home.adapter.CarAdapter
 import com.iwkms.drivenext.presentation.main.home.viewmodel.SearchResultViewModel
 
@@ -33,6 +34,7 @@ class SearchResultFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
         setupRecyclerView()
         setupListeners()
         setupObservers()

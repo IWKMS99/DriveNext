@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.iwkms.drivenext.databinding.FragmentLoaderBinding
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 
 class LoaderFragment : Fragment() {
     private var _binding: FragmentLoaderBinding? = null
@@ -23,6 +24,7 @@ class LoaderFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
         Handler(Looper.getMainLooper()).postDelayed({
             val action = LoaderFragmentDirections.actionLoaderFragmentToSearchResultFragment(args.searchQuery)
             findNavController().navigate(action)

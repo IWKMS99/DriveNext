@@ -10,6 +10,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.iwkms.drivenext.R
 import com.iwkms.drivenext.databinding.FragmentNoConnectionBinding
 import com.iwkms.drivenext.presentation.common.util.NetworkUtils
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 
 class NoConnectionFragment : Fragment() {
 
@@ -27,6 +28,7 @@ class NoConnectionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
 
         binding.btnRetry.setOnClickListener {
             if (NetworkUtils.isOnline(requireContext())) {

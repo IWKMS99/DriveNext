@@ -14,6 +14,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.iwkms.drivenext.R
 import com.iwkms.drivenext.data.repository.SessionRepositoryProvider
 import com.iwkms.drivenext.databinding.FragmentOnboardingBinding
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 import com.iwkms.drivenext.presentation.onboarding.adapter.OnboardingAdapter
 import kotlinx.coroutines.launch
 
@@ -37,6 +38,7 @@ class OnboardingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
         setupViewPager()
         setupListeners()
         setupIndicators()

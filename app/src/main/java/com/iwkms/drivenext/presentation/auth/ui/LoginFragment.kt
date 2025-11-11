@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.iwkms.drivenext.R
 import com.iwkms.drivenext.databinding.FragmentLoginBinding
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 import com.iwkms.drivenext.presentation.auth.viewmodel.LoginViewModel
 import com.iwkms.drivenext.presentation.auth.viewmodel.LoginViewModelFactory
 import com.iwkms.drivenext.presentation.auth.viewmodel.SignInError
@@ -37,6 +38,7 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
         setupListeners()
         setupObservers()
     }

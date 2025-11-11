@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.iwkms.drivenext.databinding.FragmentOnboardingPageBinding
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 
 class OnboardingPageFragment : Fragment() {
 
@@ -22,6 +23,7 @@ class OnboardingPageFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
         arguments?.let {
             binding.ivIllustration.setImageResource(it.getInt(ARG_IMAGE_RES))
             binding.tvTitle.text = it.getString(ARG_TITLE)

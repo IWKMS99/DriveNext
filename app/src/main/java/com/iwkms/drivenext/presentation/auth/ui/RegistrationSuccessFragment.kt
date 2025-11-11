@@ -13,6 +13,7 @@ import com.iwkms.drivenext.R
 import com.iwkms.drivenext.data.repository.SessionRepositoryProvider
 import com.iwkms.drivenext.databinding.FragmentRegistrationSuccessBinding
 import com.iwkms.drivenext.presentation.auth.viewmodel.RegistrationViewModel
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 import kotlinx.coroutines.launch
 
 class RegistrationSuccessFragment : Fragment() {
@@ -36,6 +37,7 @@ class RegistrationSuccessFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
 
         binding.btnNext.setOnClickListener {
             completeRegistration()

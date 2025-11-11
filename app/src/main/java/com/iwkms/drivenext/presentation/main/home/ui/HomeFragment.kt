@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.iwkms.drivenext.databinding.FragmentHomeBinding
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 import com.iwkms.drivenext.presentation.main.home.adapter.CarAdapter
 import com.iwkms.drivenext.presentation.main.home.viewmodel.HomeViewModel
 
@@ -32,6 +33,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
         setupRecyclerView()
         setupListeners()
         setupObservers()

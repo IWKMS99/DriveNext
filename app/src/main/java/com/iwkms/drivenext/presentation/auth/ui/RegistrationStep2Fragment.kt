@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import com.iwkms.drivenext.R
 import com.iwkms.drivenext.databinding.FragmentRegistrationStep2Binding
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 import com.iwkms.drivenext.presentation.auth.viewmodel.RegistrationViewModel
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -35,6 +36,7 @@ class RegistrationStep2Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
 
         restoreState()
         setupListeners()

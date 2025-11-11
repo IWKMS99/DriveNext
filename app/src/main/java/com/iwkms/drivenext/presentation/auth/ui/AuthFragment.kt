@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.iwkms.drivenext.R
 import com.iwkms.drivenext.databinding.FragmentAuthBinding
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 
 class AuthFragment : Fragment() {
 
@@ -24,6 +25,7 @@ class AuthFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
 
         binding.btnLogin.setOnClickListener {
             findNavController().navigate(R.id.action_authFragment_to_loginFragment)

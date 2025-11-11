@@ -14,6 +14,7 @@ import coil.transform.CircleCropTransformation
 import com.iwkms.drivenext.R
 import com.iwkms.drivenext.databinding.FragmentSettingsBinding
 import com.iwkms.drivenext.domain.model.AppTheme
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 import com.iwkms.drivenext.presentation.main.settings.adapter.SettingsAdapter
 import com.iwkms.drivenext.presentation.main.settings.model.SettingsItem
 import com.iwkms.drivenext.presentation.main.settings.viewmodel.SettingsViewModel
@@ -35,6 +36,7 @@ class SettingsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
         setupRecyclerView()
         setupListeners()
         setupObservers()

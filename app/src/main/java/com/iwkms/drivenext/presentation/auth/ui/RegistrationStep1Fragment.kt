@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.navGraphViewModels
 import com.iwkms.drivenext.R
 import com.iwkms.drivenext.databinding.FragmentRegistrationStep1Binding
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 import com.iwkms.drivenext.presentation.auth.viewmodel.RegistrationViewModel
 
 class RegistrationStep1Fragment : Fragment() {
@@ -29,6 +30,7 @@ class RegistrationStep1Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
         setupListeners()
         setupObservers()
     }

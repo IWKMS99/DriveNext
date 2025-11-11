@@ -19,6 +19,7 @@ import coil.load
 import coil.transform.CircleCropTransformation
 import com.iwkms.drivenext.R
 import com.iwkms.drivenext.databinding.FragmentProfileBinding
+import com.iwkms.drivenext.presentation.common.util.applyStatusBarPadding
 import com.iwkms.drivenext.presentation.main.settings.viewmodel.ProfileViewModel
 import com.iwkms.drivenext.presentation.main.settings.viewmodel.ProfileViewModelFactory
 import java.io.File
@@ -86,6 +87,7 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.root.applyStatusBarPadding()
         setupListeners()
         setupObservers()
     }
