@@ -59,7 +59,7 @@ class SettingsFragment : Fragment() {
     }
 
     private fun showThemeDialog() {
-        val options = AppTheme.values()
+        val options = AppTheme.entries.toTypedArray()
         val labels = options.map { getString(it.toLabelRes()) }.toTypedArray()
         val selectedIndex = options.indexOf(viewModel.theme.value ?: AppTheme.SYSTEM)
         AlertDialog.Builder(requireContext())
