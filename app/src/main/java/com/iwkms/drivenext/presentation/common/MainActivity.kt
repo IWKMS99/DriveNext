@@ -1,7 +1,6 @@
 package com.iwkms.drivenext.presentation.common
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.net.ConnectivityManager
 import android.net.Network
 import android.os.Bundle
@@ -60,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("MissingPermission")
     private fun monitorConnectivity() {
-        connectivityManager = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        connectivityManager = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
         networkCallback = object : ConnectivityManager.NetworkCallback() {
             override fun onAvailable(network: Network) {
                 runOnUiThread { handleConnectivityChange(true) }
