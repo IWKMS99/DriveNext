@@ -53,7 +53,7 @@ class SettingsFragment : Fragment() {
     private fun handleSettingClick(item: SettingsItem) {
         when (item.titleResId) {
             R.string.settings_my_bookings -> findNavController().navigate(R.id.action_settingsFragment_to_myBookingsFragment)
-            R.string.settings_connect_car -> findNavController().navigate(R.id.action_settingsFragment_to_connectCarFragment)
+            R.string.settings_connect_car -> findNavController().navigate(R.id.action_settingsFragment_to_becomeHostFragment)
             R.string.settings_theme -> showThemeDialog()
             R.string.settings_notifications -> showNotificationsDialog()
             else -> Unit

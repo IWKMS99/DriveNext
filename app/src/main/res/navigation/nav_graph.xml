@@ -197,10 +197,14 @@
     </fragment>
 
     <fragment
-        android:id="@+id/connectCarFragment"
-        android:name="com.iwkms.drivenext.presentation.main.settings.ui.ConnectCarFragment"
-        android:label="ConnectCarFragment"
-        tools:layout="@layout/fragment_connect_car" />
+        android:id="@+id/becomeHostFragment"
+        android:name="com.iwkms.drivenext.presentation.main.settings.ui.BecomeHostFragment"
+        android:label="BecomeHostFragment"
+        tools:layout="@layout/fragment_become_host">
+        <action
+            android:id="@+id/action_becomeHostFragment_to_addCarStep1Fragment"
+            app:destination="@id/addCarStep1Fragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/settingsFragment"
@@ -214,8 +218,52 @@
             android:id="@+id/action_settingsFragment_to_myBookingsFragment"
             app:destination="@id/myBookingsFragment" />
         <action
-            android:id="@+id/action_settingsFragment_to_connectCarFragment"
-            app:destination="@id/connectCarFragment" />
+            android:id="@+id/action_settingsFragment_to_becomeHostFragment"
+            app:destination="@id/becomeHostFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addCarStep1Fragment"
+        android:name="com.iwkms.drivenext.presentation.main.settings.ui.AddCarStep1Fragment"
+        android:label="AddCarStep1Fragment"
+        tools:layout="@layout/fragment_add_car_step1">
+        <action
+            android:id="@+id/action_addCarStep1Fragment_to_addCarStep2Fragment"
+            app:destination="@id/addCarStep2Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addCarStep2Fragment"
+        android:name="com.iwkms.drivenext.presentation.main.settings.ui.AddCarStep2Fragment"
+        android:label="AddCarStep2Fragment"
+        tools:layout="@layout/fragment_add_car_step2">
+        <action
+            android:id="@+id/action_addCarStep2Fragment_to_addCarPhotosFragment"
+            app:destination="@id/addCarPhotosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addCarPhotosFragment"
+        android:name="com.iwkms.drivenext.presentation.main.settings.ui.AddCarPhotosFragment"
+        android:label="AddCarPhotosFragment"
+        tools:layout="@layout/fragment_add_car_photos">
+        <action
+            android:id="@+id/action_addCarPhotosFragment_to_addCarSuccessFragment"
+            app:destination="@id/addCarSuccessFragment"
+            app:popUpTo="@id/settingsFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addCarSuccessFragment"
+        android:name="com.iwkms.drivenext.presentation.main.settings.ui.AddCarSuccessFragment"
+        android:label="AddCarSuccessFragment"
+        tools:layout="@layout/fragment_add_car_success">
+        <action
+            android:id="@+id/action_addCarSuccessFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
     </fragment>
 
     <fragment

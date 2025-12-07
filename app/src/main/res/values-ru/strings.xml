@@ -149,4 +149,39 @@
     <string name="booking_details_license_label">В/У</string>
     <string name="booking_cancel_button">Отменить бронирование</string>
     <string name="booking_cancelled_success">Бронирование отменено</string>
+
+    <!-- Become a Host (Intro) -->
+    <string name="host_intro_title">Стать арендодателем</string>
+    <string name="host_intro_subtitle">Узнайте, что включает в себя становление арендодателем в приложении. Присоединяйтесь к тысячам владельцев.</string>
+    <string name="host_block_1_title">Как это работает</string>
+    <string name="host_block_1_desc">Размещение бесплатное, вы можете устанавливать свои цены и правила.</string>
+    <string name="host_block_2_title">Политика страхования</string>
+    <string name="host_block_2_desc">Доступны различные уровни защиты автомобиля на случай непредвиденных ситуаций.</string>
+    <string name="host_block_3_title">Мы поддержим вас</string>
+    <string name="host_block_3_desc">От проверки арендаторов до поддержки клиентов – мы всегда поможем.</string>
+    <string name="host_btn_start">Начать</string>
+
+    <!-- Add Car Step 1 (Address) -->
+    <string name="add_car_title">Добавление автомобиля</string>
+    <string name="add_car_step1_subtitle">Где расположен ваш автомобиль?</string>
+    <string name="hint_car_address">Введите адрес</string>
+
+    <!-- Add Car Step 2 (Details) -->
+    <string name="hint_car_year">Год выпуска</string>
+    <string name="hint_car_brand">Марка</string>
+    <string name="hint_car_model">Модель</string>
+    <string name="hint_car_transmission">Трансмиссия</string>
+    <string name="hint_car_mileage">Пробег</string>
+    <string name="hint_car_desc">Добавьте описание</string>
+    <string name="hint_car_desc_placeholder">Пожалуйста, добавьте дополнительную информацию о вашем автомобиле…</string>
+    <string name="btn_send">Отправить</string>
+
+    <!-- Add Car Step 3 (Photos) -->
+    <string name="add_car_photos_title">Добавление фотографий</string>
+    <string name="add_car_photos_limit">Загружено %1$d из 5 фото</string>
+
+    <!-- Success -->
+    <string name="add_car_success_title">Ваш автомобиль добавлен</string>
+    <string name="add_car_success_subtitle">Поздравляем! Ваш автомобиль одобрен</string>
+    <string name="btn_to_main">На главную</string>
 </resources>
