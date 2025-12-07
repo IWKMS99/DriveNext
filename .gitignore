@@ -1,18 +1,39 @@
-*.iml
+# Сгенерированные файлы и папки сборки
+/build
+/captures
+.externalNativeBuild
+.cxx
 .gradle
-/local.properties
+
+# Специфичные файлы Gradle/Java
+*.iml
+local.properties
+*.apk
+*.aar
+*.class
+*.dex
+*.log
+
+# Файлы и папки Android Studio/IntelliJ IDEA
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+/.idea/gradle.xml
+/.idea/dictionaries
+/.navigation/
+
+# Чувствительные файлы (ключи подписи)
+*.jks
+*.keystore
+
+# Файлы операционных систем
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
-local.properties
+thumbs.db
+
+# Ваши дополнительные игнорируемые файлы
 *.py
 *.txt
 AGENTS.md
