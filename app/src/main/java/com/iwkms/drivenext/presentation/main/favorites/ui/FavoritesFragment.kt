@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.iwkms.drivenext.R
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.iwkms.drivenext.data.repository.FakeCarRepository
 import com.iwkms.drivenext.databinding.FragmentFavoritesBinding
 import com.iwkms.drivenext.domain.repository.CarRepository
@@ -54,6 +54,8 @@ class FavoritesFragment : Fragment() {
                 findNavController().navigate(action)
             }
         )
+
+        binding.rvFavorites.layoutManager = LinearLayoutManager(requireContext())
         binding.rvFavorites.adapter = adapter
     }
 
