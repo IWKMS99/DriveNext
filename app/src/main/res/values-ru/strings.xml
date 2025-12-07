@@ -12,8 +12,8 @@
     <string name="btn_login_with_google">Войти через Google</string>
     <string name="btn_retry">Повторить</string>
     <string name="car_card_details">Детали</string>
-    <string name="car_card_book">Забронировать</string>
-    <string name="car_details_book_button">Забронировать автомобиль</string>
+    <string name="car_card_book">Бронь</string>
+    <string name="car_details_book_button">Забронировать</string>
     <string name="booking_confirm_button">Подтвердить бронь</string>
 
     <string name="no_connection_title">Нет подключения к интернету</string>
@@ -111,4 +111,42 @@
     <string name="car_details_address_label">Адрес нахождения</string>
     <string name="car_details_description_label">Описание</string>
     <string name="car_card_price_per_day">%1$d ₽ / день</string>
+
+    <!-- Favorites -->
+    <string name="favorites_title">Избранное</string>
+    <string name="favorites_empty">Список избранного пуст.\nДобавьте понравившиеся автомобили.</string>
+
+    <!-- Booking Checkout -->
+    <string name="booking_screen_title">Оформление аренды</string>
+    <string name="booking_dates_label">Даты аренды</string>
+    <string name="booking_dates_placeholder">Выберите даты</string>
+    <string name="booking_location_label">Место получения</string>
+    <string name="booking_price_rent">Аренда автомобиля x%1$d дн.:</string>
+    <string name="booking_price_insurance">Страховка x%1$d дн.:</string>
+    <string name="booking_price_total">Итого</string>
+    <string name="booking_deposit">Возвращаемый депозит</string>
+    <string name="booking_button_continue">Продолжить</string>
+
+    <!-- Booking Success -->
+    <string name="success_title">Удачной поездки</string>
+    <string name="success_subtitle">Бронирование успешно создано</string>
+    <string name="success_btn_home">Домой</string>
+
+    <!-- Formats -->
+    <string name="price_format">%1$d ₽</string>
+
+    <!-- My Bookings -->
+    <string name="bookings_empty">У вас пока нет бронирований</string>
+    <string name="booking_status_active">Активно</string>
+    <string name="booking_status_completed">Завершено</string>
+    <string name="booking_status_cancelled">Отменено</string>
+    <string name="booking_dates_format">%1$s - %2$s</string>
+
+    <!-- Booking Details -->
+    <string name="booking_details_title">Бронирование #%1$s</string>
+    <string name="booking_details_status_label">Статус аренды</string>
+    <string name="booking_details_driver_label">Водитель</string>
+    <string name="booking_details_license_label">В/У</string>
+    <string name="booking_cancel_button">Отменить бронирование</string>
+    <string name="booking_cancelled_success">Бронирование отменено</string>
 </resources>

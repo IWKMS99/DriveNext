@@ -121,5 +121,37 @@
     <string name="booking_title">Booking %1$s %2$s</string>
     <string name="booking_summary">You are booking %1$s %2$s for %3$s per day.</string>
     <string name="booking_coming_soon">Online booking will be available soon</string>
+
+    <string name="favorites_title">Favorites</string>
+    <string name="favorites_empty">Your favorites list is empty.</string>
+
+    <string name="booking_screen_title">Checkout</string>
+    <string name="booking_dates_label">Rental dates</string>
+    <string name="booking_dates_placeholder">Select dates</string>
+    <string name="booking_location_label">Pick-up location</string>
+    <string name="booking_price_rent">Car rent x%1$d days:</string>
+    <string name="booking_price_insurance">Insurance x%1$d days:</string>
+    <string name="booking_price_total">Total</string>
+    <string name="booking_deposit">Refundable deposit</string>
+    <string name="booking_button_continue">Continue</string>
+
+    <string name="success_title">Have a nice trip</string>
+    <string name="success_subtitle">Booking created successfully</string>
+    <string name="success_btn_home">Home</string>
+
+    <string name="price_format">%1$d ₽</string>
+
+    <string name="bookings_empty">You have no bookings yet</string>
+    <string name="booking_status_active">Active</string>
+    <string name="booking_status_completed">Completed</string>
+    <string name="booking_status_cancelled">Cancelled</string>
+    <string name="booking_dates_format">%1$s - %2$s</string>
+
+    <string name="booking_details_title">Booking #%1$s</string>
+    <string name="booking_details_status_label">Rent status</string>
+    <string name="booking_details_driver_label">Driver</string>
+    <string name="booking_details_license_label">License</string>
+    <string name="booking_cancel_button">Cancel booking</string>
+    <string name="booking_cancelled_success">Booking cancelled</string>
 </resources>
 
