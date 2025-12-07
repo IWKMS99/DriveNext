@@ -158,7 +158,12 @@
         android:id="@+id/favoritesFragment"
         android:name="com.iwkms.drivenext.presentation.main.favorites.ui.FavoritesFragment"
         android:label="FavoritesFragment"
-        tools:layout="@layout/fragment_favorites"/>
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoritesFragment_to_carDetailsFragment"
+            app:destination="@id/carDetailsFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/noConnectionFragment"
         android:name="com.iwkms.drivenext.presentation.common.NoConnectionFragment"
@@ -175,7 +180,21 @@
         android:id="@+id/myBookingsFragment"
         android:name="com.iwkms.drivenext.presentation.main.settings.ui.MyBookingsFragment"
         android:label="MyBookingsFragment"
-        tools:layout="@layout/fragment_my_bookings" />
+        tools:layout="@layout/fragment_my_bookings">
+        <action
+            android:id="@+id/action_myBookingsFragment_to_bookingDetailsFragment"
+            app:destination="@id/bookingDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookingDetailsFragment"
+        android:name="com.iwkms.drivenext.presentation.main.settings.ui.BookingDetailsFragment"
+        android:label="BookingDetailsFragment"
+        tools:layout="@layout/fragment_booking_details">
+        <argument
+            android:name="bookingId"
+            app:argType="string" />
+    </fragment>
 
     <fragment
         android:id="@+id/connectCarFragment"
@@ -220,6 +239,11 @@
         <argument
             android:name="carId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_bookingFragment_to_bookingSuccessFragment"
+            app:destination="@id/bookingSuccessFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false"/>
     </fragment>
 
     <action android:id="@+id/action_global_authFragment"
@@ -230,5 +254,19 @@
     <action
         android:id="@+id/action_global_noConnectionFragment"
         app:destination="@id/noConnectionFragment"/>
+
+    <fragment
+        android:id="@+id/bookingSuccessFragment"
+        android:name="com.iwkms.drivenext.presentation.main.home.ui.BookingSuccessFragment"
+        android:label="BookingSuccessFragment"
+        tools:layout="@layout/fragment_booking_success">
+        <action
+            android:id="@+id/action_bookingSuccessFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
 
 </navigation>
