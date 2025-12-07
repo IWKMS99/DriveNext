@@ -6,4 +6,7 @@ interface CarRepository {
     fun getCars(): List<Car>
     fun searchCars(query: String): List<Car>
     fun getCarById(id: Int): Car?
+    fun getFavorites(): List<Car>
+    fun toggleFavorite(carId: Int): Boolean
+    fun addCar(car: Car)
 }
