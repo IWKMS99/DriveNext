@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.iwkms.drivenext.R
 import com.iwkms.drivenext.databinding.ItemCarCardBinding
 import com.iwkms.drivenext.domain.model.Car
@@ -26,6 +27,11 @@ class CarAdapter(
     inner class CarViewHolder(private val binding: ItemCarCardBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(car: Car) {
+            binding.ivCarImage.load(car.mainImage.ifEmpty { R.drawable.ic_car_loader }) {
+                crossfade(true)
+                error(R.drawable.ic_car_loader)
+            }
+
             binding.tvCarModel.text = car.model
             binding.tvCarBrand.text = car.brand
             binding.tvCarPrice.text = binding.root.context.getString(

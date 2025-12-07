@@ -111,9 +111,11 @@
     <string name="permission_gallery_required">Gallery permission is required to continue.</string>
 
     <!-- Car details -->
-    <string name="car_card_price_per_day">%1$s / day</string>
+    <string name="car_card_price_per_day">%1$d ₽ / day</string>
     <string name="car_details_specs">Transmission: %1$s\nFuel: %2$s</string>
     <string name="car_details_placeholder_description">Detailed description for %1$s will be added later.</string>
+    <string name="car_details_address_label">Location address</string>
+    <string name="car_details_description_label">Description</string>
 
     <!-- Booking -->
     <string name="booking_title">Booking %1$s %2$s</string>

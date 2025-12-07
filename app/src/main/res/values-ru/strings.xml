@@ -100,11 +100,15 @@
     <string name="permission_camera_required">Нужно разрешить доступ к камере.</string>
     <string name="permission_gallery_required">Нужно разрешить доступ к галерее.</string>
 
-    <string name="car_card_price_per_day">%1$s / сутки</string>
-    <string name="car_details_specs">Трансмиссия: %1$s\nТопливо: %2$s</string>
-    <string name="car_details_placeholder_description">Расширенное описание %1$s появится позже.</string>
 
     <string name="booking_title">Бронирование %1$s %2$s</string>
     <string name="booking_summary">Вы бронируете %1$s %2$s по цене %3$s в сутки.</string>
     <string name="booking_coming_soon">Онлайн-бронирование появится позже</string>
+
+    <!-- Car Details -->
+    <string name="car_details_specs">Трансмиссия: %1$s\nТопливо: %2$s</string>
+    <string name="car_details_placeholder_description">Расширенное описание %1$s появится позже.</string>
+    <string name="car_details_address_label">Адрес нахождения</string>
+    <string name="car_details_description_label">Описание</string>
+    <string name="car_card_price_per_day">%1$d ₽ / день</string>
 </resources>

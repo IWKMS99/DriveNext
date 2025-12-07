@@ -46,11 +46,24 @@ class BookingFragment : Fragment() {
             findNavController().navigateUp()
         }
 
-        binding.tvBookingTitle.text = getString(R.string.booking_title, car.brand, car.model)
-        binding.tvBookingSummary.text = getString(R.string.booking_summary, car.brand, car.model, car.pricePerDay)
+        binding.tvBookingTitle.text = getString(
+            R.string.booking_title,
+            car.brand,
+            car.model
+        )
+        binding.tvBookingSummary.text = getString(
+            R.string.booking_summary,
+            car.brand,
+            car.model,
+            car.pricePerDay.toString()
+        )
 
         binding.btnConfirm.setOnClickListener {
-            Snackbar.make(binding.root, R.string.booking_coming_soon, Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(
+                binding.root,
+                R.string.booking_coming_soon,
+                Snackbar.LENGTH_SHORT
+            ).show()
         }
     }
 

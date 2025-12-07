@@ -17,4 +17,8 @@
     <color name="background_main">#121212</color>
     <color name="inactive_element">#2B2B2B</color>
     <color name="input_field_stroke">#3A3A3A</color>
+
+    <color name="surface_card">#1E1E1E</color>
+    <color name="icon_primary">#F5F5F5</color>
+    <color name="divider">#2C2C2C</color>
 </resources>
