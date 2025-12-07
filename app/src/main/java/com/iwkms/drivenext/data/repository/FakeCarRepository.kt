@@ -7,7 +7,7 @@ import com.iwkms.drivenext.domain.repository.CarRepository
 class FakeCarRepository : CarRepository {
 
     override fun getCars(): List<Car> {
-        return MockDatabase.cars
+        return MockDatabase.cars.toList()
     }
 
     override fun searchCars(query: String): List<Car> {
@@ -27,9 +27,16 @@ class FakeCarRepository : CarRepository {
     }
 
     override fun toggleFavorite(carId: Int): Boolean {
-        val car = MockDatabase.cars.find { it.id == carId } ?: return false
-        car.isFavorite = !car.isFavorite
-        return car.isFavorite
+        val index = MockDatabase.cars.indexOfFirst { it.id == carId }
+        if (index == -1) return false
+
+        val currentCar = MockDatabase.cars[index]
+
+        val updatedCar = currentCar.copy(isFavorite = !currentCar.isFavorite)
+
+        MockDatabase.cars[index] = updatedCar
+
+        return updatedCar.isFavorite
     }
 
     override fun addCar(car: Car) {

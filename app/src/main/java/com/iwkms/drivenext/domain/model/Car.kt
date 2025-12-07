@@ -13,5 +13,5 @@ data class Car(
     val reviewCount: Int,
     val mainImage: String,
     val images: List<String>,
-    var isFavorite: Boolean = false
+    val isFavorite: Boolean = false
 )
