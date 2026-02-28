@@ -1,6 +1,6 @@
 ﻿# DriveNext
 
-[![Android CI](https://github.com/iwkms99/DriveNext/actions/workflows/ci.yml/badge.svg)](https://github.com/i-wkm/DriveNext/actions/workflows/ci.yml) ![Min SDK](https://img.shields.io/badge/minSDK-30-blue) ![Target SDK](https://img.shields.io/badge/targetSDK-36-blueviolet) ![Kotlin](https://img.shields.io/badge/Kotlin-2.0%2B-7f52ff)
+[![Android CI](https://github.com/iwkms99/DriveNext/actions/workflows/ci.yml/badge.svg)](https://github.com/iwkms/DriveNext/actions/workflows/ci.yml) ![Min SDK](https://img.shields.io/badge/minSDK-30-blue) ![Target SDK](https://img.shields.io/badge/targetSDK-36-blueviolet) ![Kotlin](https://img.shields.io/badge/Kotlin-2.0%2B-7f52ff)
 
 DriveNext is a modern Android application for booking cars, built as part of the mobile development course. The app implements a clean multi-layer architecture (data/domain/presentation), edge-to-edge UI, theme switching, and an onboarding/auth flow. Data is kept locally with Jetpack DataStore until the Supabase backend is unlocked in later labs.
 
